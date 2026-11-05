@@ -1,0 +1,8 @@
+configs/model_config.yaml
+data/
+outputs/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.gradio/

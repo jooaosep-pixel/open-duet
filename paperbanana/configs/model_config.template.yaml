@@ -1,0 +1,44 @@
+# PaperBanana model configuration.
+# Copy this file to configs/model_config.yaml (git-ignored) and fill in the values you need.
+# Every value can also be overridden with an environment variable (shown in brackets) or
+# from the web UI. Only ONE provider key is required: the text and image models you pick
+# decide which keys are used.
+
+defaults:
+  # Text / multimodal model used by the Retriever, Planner, Stylist and Critic agents.
+  # Routing is decided by the model name prefix:
+  #   gemini-*            -> Google Gemini API (google_api_key)
+  #   gpt-*, o*, openai/* -> OpenAI (openai_api_key)
+  #   openrouter/<model>  -> OpenRouter, any vendor (openrouter_api_key)
+  #   local/<model>       -> any OpenAI-compatible server (local_openai_base_url)
+  #   ollama/<model>      -> Ollama (ollama_base_url, defaults to http://localhost:11434/v1)
+  text_model: "gemini-3.1-pro-preview"            # [PAPERBANANA_TEXT_MODEL]
+  # Image generation model used by the Visualizer.
+  #   gemini-3.1-flash-image (Nano Banana 2, fast), gemini-3-pro-image (Nano Banana Pro, 4K),
+  #   gemini-2.5-flash-image (legacy), gpt-image-2 / gpt-image-1 (OpenAI),
+  #   openrouter/<model-with-image-output>
+  image_model: "gemini-3.1-flash-image"           # [PAPERBANANA_IMAGE_MODEL]
+  critic_rounds: 2                                # [PAPERBANANA_CRITIC_ROUNDS] max Critic -> Visualizer refinement rounds
+  retrieval_top_k: 3                              # [PAPERBANANA_RETRIEVAL_TOP_K] reference figures given to the Planner
+  default_aspect_ratio: "16:9"                    # 21:9 | 16:9 | 3:2 | 4:3 | 1:1
+  default_image_size: "1K"                        # 1K | 2K | 4K  (4K needs gemini-3-pro-image)
+  default_style: "clean"                          # see paperbanana/styles.py
+  request_timeout: 180                            # seconds per model call
+
+api_keys:
+  google_api_key: ""        # [GOOGLE_API_KEY or GEMINI_API_KEY]
+  openai_api_key: ""        # [OPENAI_API_KEY]
+  openrouter_api_key: ""    # [OPENROUTER_API_KEY]
+  local_openai_api_key: "local"   # [LOCAL_OPENAI_API_KEY]
+  ollama_api_key: "ollama"        # [OLLAMA_API_KEY]
+  hf_token: ""              # [HF_TOKEN] optional, faster benchmark downloads
+
+base_urls:
+  openrouter_base_url: "https://openrouter.ai/api/v1"   # [OPENROUTER_BASE_URL]
+  openai_base_url: ""                                   # [OPENAI_BASE_URL] leave empty for api.openai.com
+  local_openai_base_url: ""                             # [LOCAL_OPENAI_BASE_URL] e.g. http://127.0.0.1:8000/v1
+  ollama_base_url: ""                                   # [OLLAMA_BASE_URL]
+
+paths:
+  data_dir: "data"          # [PAPERBANANA_DATA_DIR] where PaperBananaBench is cached
+  output_dir: "outputs"     # [PAPERBANANA_OUTPUT_DIR] generated figures and run logs

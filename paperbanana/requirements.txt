@@ -1,0 +1,10 @@
+google-genai>=1.0
+openai>=1.60
+gradio>=5.0
+datasets>=3.0
+huggingface_hub>=0.25
+pillow>=10.0
+pyyaml>=6.0
+matplotlib>=3.8
+numpy>=1.26
+pytest>=8.0
