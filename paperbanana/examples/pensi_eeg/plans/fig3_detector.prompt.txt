@@ -1,0 +1,34 @@
+Technical engineering schematic of an EEG seizure detection pipeline. Layout: 16:9 aspect ratio, left-to-right linear flow, grid-aligned components with orthogonal connectors.
+
+Components:
+- "EEG BRUTO (EDF, 256 HZ)": 18 parallel graphite wavy lines.
+- "JANELA DE 2S": Purple dashed box enclosing a signal segment.
+- "ENERGIA (8 FAIXAS X 18 CANAIS)": Stack of three blue 8x18 matrices.
+- "CONCATENAÇÃO (3 ÉPOCAS)": Purple grouping bracket merging matrices.
+- "VETOR DE MEDIDAS (432 VALORES)": Long, thin blue horizontal rectangle.
+- "REGRESSÃO LOGÍSTICA": Orange rectangular block.
+- "LIMIAR E PERSISTÊNCIA": Purple rounded box.
+- "ALARME": Orange bell icon.
+- "PESOS POR FAIXA E CANAL": Graphite and orange heatmap grid.
+
+Connections:
+- Graphite arrow from signal to windowing.
+- Purple arrow labeled "EXTRAÇÃO DE ENERGIA" to feature grid.
+- Blue arrows connecting grid, concatenation, and vector.
+- Graphite arrow to classifier.
+- Orange arrow labeled "PROBABILIDADE" to decision logic.
+- Orange arrow to alarm.
+- Dashed graphite arrow labeled "EXPLICABILIDADE" to heatmap.
+
+Style Guide:
+- Palette: Purple (#6A4BB8), Blue (#33639A), Orange (#C44A2F), Graphite (#1B1F3A), White background.
+- Shape Language: Flat 2D vector, grid-aligned rectangles, orthogonal square-cornered connectors, dashed boxes for grouping.
+- Typography: Sans-serif, small caps, graphite color, legible sizes.
+- Spacing: Evenly distributed stages, clear margins.
+
+Annotations:
+- Title: "FLUXO DO DETECTOR DE CRISES".
+- Legend: "(A) EXTRAÇÃO DE CARACTERÍSTICAS POR JANELA", "(B) CLASSIFICAÇÃO LINEAR E DECISÃO TEMPORAL".
+- Footer Note: "MODELO PERSONALIZADO OU GENERALISTA".
+
+Constraints: flat vector illustration style, crisp legible text, no misspellings, no watermark, no photographic textures, white background, academic figure quality, nothing outside the plan.

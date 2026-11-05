@@ -1,0 +1,17 @@
+[
+ {
+  "id": "ref_172",
+  "caption": "Figure 2: Overview of the NEED framework architecture. (1) Cross-Subject Adaptation with the Individual Adaptation Module (IAM) pretrained on multiple datasets to normalize subject-specific patterns; (2) Dual-Pathway Understanding with parallel Perception (PU) and Semantic (SU) modules that capture complementary visual information; and (3) a Unified Inference Mechanism that adaptively generates reconstructions across different tasks.",
+  "score": 0.0291
+ },
+ {
+  "id": "ref_201",
+  "caption": "Figure 1: The overall framework of FedAux. Left: The server maintains a global GNN model together with learnable auxiliary projection vectors (APVs) that are broadcast to all clients at the start of each communication round. Middle: Clients jointly optimize the GNN and APV during local training, where the APV projects node embeddings onto a 1D $\\mathbf { \\em a } _ { k }$ -space that positions related nodes closer together. Right: After local training, clients transmit their optimized GNN parameters and personalized APVs to the server. The server computes a client similarity matrix by comparing the learned APVs, which captures the heterogeneity across subgraphs without accessing raw data. These similarities determine personalized aggregation weights. At the end of each round, the updated global parameters are broadcast for the next communication round. ",
+  "score": 0.021
+ },
+ {
+  "id": "ref_42",
+  "caption": "Figure 2: Overview of the CSBrain architecture. After EEG signal preprocessing, the Crossscale Spatiotemporal Tokenization (CST) module encodes multi-resolution features within localized temporal windows and brain regions to produce robust, scale-aware tokens. The Structured Sparse Attention (SSA) module then captures long-range dependencies across windows and regions in a structured and efficient manner. CST and SSA are alternately stacked for $L$ layers to progressively integrate cross-scale spatiotemporal dependencies to build unified and robust representations for diverse BCI tasks with varying spatiotemporal scales. Finally, a lightweight task head is appended for reconstruction, classification, or regression. ",
+  "score": 0.0504
+ }
+]

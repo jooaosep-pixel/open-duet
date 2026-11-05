@@ -1,0 +1,17 @@
+[
+ {
+  "id": "ref_141",
+  "caption": "Figure 1: Overview of LUNA. EEG signals $( B \\times C \\times T )$ are segmented into patches and embedded. Channel-Unification Module maps channel-wise features into a fixed-size latent space using learned queries $( Q )$ . Patch-wise Temporal Attention processes this latent sequence. The decoder generates task-specific outputs. ",
+  "score": 0.0447
+ },
+ {
+  "id": "ref_42",
+  "caption": "Figure 2: Overview of the CSBrain architecture. After EEG signal preprocessing, the Crossscale Spatiotemporal Tokenization (CST) module encodes multi-resolution features within localized temporal windows and brain regions to produce robust, scale-aware tokens. The Structured Sparse Attention (SSA) module then captures long-range dependencies across windows and regions in a structured and efficient manner. CST and SSA are alternately stacked for $L$ layers to progressively integrate cross-scale spatiotemporal dependencies to build unified and robust representations for diverse BCI tasks with varying spatiotemporal scales. Finally, a lightweight task head is appended for reconstruction, classification, or regression. ",
+  "score": 0.0333
+ },
+ {
+  "id": "ref_134",
+  "caption": "Figure 1: The JanusDNA Architecture for Bidirectional DNA Modeling. JanusDNA employs a hierarchical bidirectional strategy to comprehensively model DNA sequences. (A) DNA, with its inherent double-stranded nature. (B) The model processes both the forward and reverse complement strands independently in parallel to capture complete biological context, with their embeddings subsequently combined for downstream tasks. (C) The core JanusDNA model architecture processes a single input strand using parallel left-to-right and right-to-left pathways. Each pathway consists of Mamba-FFN and Mamba-MoE layers for effective and efficient sequential encoding. (D) The MoE architecture enhances model capacity and specialization by dynamically and sparsely routing inputs to a subset of expert networks, enabling efficient computation and improved representation learning. (E) The Bidirectional Global Fusion mechanism, utilizing a specific attention mask, integrates the forward and backward representations from (C) to ensure that each nucleotide’s embedding is informed by its complete sequence context. ",
+  "score": 0.0439
+ }
+]

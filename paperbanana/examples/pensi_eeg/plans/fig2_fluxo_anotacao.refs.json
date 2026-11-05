@@ -1,0 +1,17 @@
+[
+ {
+  "id": "ref_69",
+  "caption": "Figure 3: Pipeline of GRiD. ",
+  "score": 0.0178
+ },
+ {
+  "id": "ref_26",
+  "caption": "Figure 1: The overall framework of AutoData. With the input instruction, agents in the research squad collaborate to generate a development blueprint by browsing the web pages. Afterward, the development squad builds the program based on the blueprint and executes the program to obtain the desired dataset. To ensure efficient and effective multi-agent collaboration, we introduce a novel oriented hypergraph cache system, called OHCache, for information sharing. As shown in the figure, plan agent $v _ { 1 }$ sends the message $m _ { 1 }$ to agents $v _ { 2 } , v _ { 3 }$ , and $v _ { 5 }$ , resulting in an oriented hyperedge $e _ { 1 }$ . Next, the web agent $( v _ { 3 } )$ retrieves messages $m _ { 1 }$ and $m _ { 3 }$ from the oriented message hypergraph $\\vec { \\mathcal { G } }$ for decision making. In addition, we design a hyperedge formatter to formalize the agent messages and a local cache system to store valuable artifacts for subsequent agents to retrieve in on-demand manners. ",
+  "score": 0.0164
+ },
+ {
+  "id": "ref_201",
+  "caption": "Figure 1: The overall framework of FedAux. Left: The server maintains a global GNN model together with learnable auxiliary projection vectors (APVs) that are broadcast to all clients at the start of each communication round. Middle: Clients jointly optimize the GNN and APV during local training, where the APV projects node embeddings onto a 1D $\\mathbf { \\em a } _ { k }$ -space that positions related nodes closer together. Right: After local training, clients transmit their optimized GNN parameters and personalized APVs to the server. The server computes a client similarity matrix by comparing the learned APVs, which captures the heterogeneity across subgraphs without accessing raw data. These similarities determine personalized aggregation weights. At the end of each round, the updated global parameters are broadcast for the next communication round. ",
+  "score": 0.0262
+ }
+]
